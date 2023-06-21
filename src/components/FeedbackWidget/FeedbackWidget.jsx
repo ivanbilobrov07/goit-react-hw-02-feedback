@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import { Section } from 'components/Section';
 import { FeedbackOptions } from 'components/FeedbackOptions';
@@ -58,4 +59,11 @@ export class FeedbackWidget extends Component {
       </>
     );
   }
+}
+
+FeedbackWidget.propTypes = {
+  title: PropTypes.string.isRequired,
+  positiveText: PropTypes.string.isRequired,
+  negativeText: PropTypes.string.isRequired,
+  neutralText: PropTypes.string.isRequired,
 }

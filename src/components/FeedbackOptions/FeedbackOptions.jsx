@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import { FeedbackButton, OptionsContainer } from './FeedbackOptions.styled';
 
 export const FeedbackOptions = ({
@@ -17,4 +19,9 @@ export const FeedbackOptions = ({
       </FeedbackButton>
     </OptionsContainer>
   );
+};
+
+FeedbackOptions.propTypes = {
+  optionsText: PropTypes.object.isRequired,
+  onLeaveFeedback: PropTypes.func.isRequired,
 };
